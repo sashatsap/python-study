@@ -29,6 +29,14 @@ def change_name(name_choice, new_name):
 			break
 
 
+def remove_number(del_name):
+	address.pop(del_name)
+
+
+def add_contact(new_name, new_number):
+	address[new_name] = new_number
+
+
 def change_number(name_choice, new_number):
 	address[name_choice] = new_number
 
@@ -36,12 +44,14 @@ def change_number(name_choice, new_number):
 while True:
 	choice = input(
 		'write what you want: \n'
-		'1 to all_address\n'
-		'2 to search_by_number\n'
-		'3 to search_by_name\n'
-		'4 to change_name\n'
-		'5 to change_number\n'
-		'6 to stop\n'
+		'1 to all address\n'
+		'2 to search by number\n'
+		'3 to search by name\n'
+		'4 to change name\n'
+		'5 to change number\n'
+		'6 to remove contact\n'
+		'7 to add contact\n'
+		'8 to stop\n'
 	)
 
 	if choice == '1':
@@ -66,4 +76,14 @@ while True:
 		print_dict()
 
 	if choice == '6':
+		remove_number(input('what name do you want to remove: '))
+		print_dict()
+
+	if choice == '7':
+		set_name = input('what name do you want to add ')
+		set_number = input('what number do you want to add ')
+		add_contact(set_name, set_number)
+		print_dict()
+
+	if choice == '8':
 		break
