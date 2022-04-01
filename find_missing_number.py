@@ -1,9 +1,9 @@
 all_nums = 5
 nums = [3, 1, 4, 5]
 
-nums.sort()
+sum_natural_nums = (1 + all_nums) / 2 * all_nums
+sum_nums = sum(nums)
 
-for i in range(all_nums - 1):
-	if nums[i] != i + 1:
-		print(i + 1)
-		break
+missing_num = sum_natural_nums - sum_nums
+
+print(int(missing_num))
