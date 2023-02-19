@@ -1,6 +1,3 @@
-import os
-
-
 class Player:
     def __init__(self, gender, physique, character, job, health, hobby, fear, inventory, info, skill_1, skill_2):
         self.gender = gender
@@ -96,38 +93,36 @@ while True:
 
     if choice == 'gender':
         player_1.unlock_gender()
-        os.system('cls')
 
     if choice == 'physique':
         player_1.unlock_physique()
-        os.system('cls')
+
     if choice == 'character':
         player_1.unlock_character()
-        os.system('cls')
+
     if choice == 'job':
         player_1.unlock_job()
-        os.system('cls')
+
     if choice == 'health':
         player_1.unlock_health()
-        os.system('cls')
+
     if choice == 'hobby':
         player_1.unlock_hobby()
-        os.system('cls')
+
     if choice == 'fear':
         player_1.unlock_fear()
-        os.system('cls')
+
     if choice == 'inventory':
         player_1.unlock_inventory()
-        os.system('cls')
+
     if choice == 'info':
         player_1.unlock_info()
-        os.system('cls')
+
     if choice == 'skill_1':
         player_1.unlock_skill_1()
-        os.system('cls')
+
     if choice == 'skill_2':
         player_1.unlock_skill_2()
-        os.system('cls')
+
     else:
         print('error in name')
-        os.system('cls')
