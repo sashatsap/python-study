@@ -1,3 +1,16 @@
+def highlight(colour, text):
+    if colour == "red":
+        return "\033[1;41m" + str(text) + "\033[1;m"
+    if colour == "magenta":
+        return "\033[1;45m" + str(text) + "\033[1;m"
+    if colour == "cyan":
+        return "\033[1;46m" + str(text) + "\033[1;m"
+    if colour == "gray":
+        return "\033[1;47m" + str(text) + "\033[1;m"
+    return str(text)
+
+
+
 class Player:
     def __init__(self, gender, physique, character, job, health, hobby, fear, inventory, info, skill_1, skill_2, id):
         self.gender = gender
@@ -16,90 +29,92 @@ class Player:
     def unlock_gender(self):
         if players_count == 0:
             open_list_1['gender'] = self.gender
-            print(self.gender)
+            print(highlight(f"cyan", self.gender))
+
         if players_count == 1:
             open_list_2['gender'] = self.gender
-            print(self.gender)
+            print(highlight(f"cyan", self.gender))
 
     def unlock_physique(self):
         if players_count == 0:
             open_list_1['physique'] = self.physique
-            print(self.physique)
+            print(highlight(f"cyan", self.physique))
+
         if players_count == 1:
             open_list_2['physique'] = self.physique
-            print(self.physique)
+            print(highlight(f"cyan", self.physique))
 
     def unlock_character(self):
         if players_count == 0:
             open_list_1['character'] = self.character
-            print(self.character)
+            print(highlight(f"cyan", self.character))
         if players_count == 1:
             open_list_2['character'] = self.character
-            print(self.physique)
+            print(highlight(f"cyan", self.character))
 
     def unlock_job(self):
         if players_count == 0:
             open_list_1['job'] = self.job
-            print(self.job)
+            print(highlight(f"cyan", self.job))
         if players_count == 1:
             open_list_2['job'] = self.job
-            print(self.physique)
+            print(highlight(f"cyan", self.job))
 
     def unlock_health(self):
         if players_count == 0:
             open_list_1['health'] = self.health
-            print(self.health)
+            print(highlight(f"cyan", self.health))
         if players_count == 1:
             open_list_2['health'] = self.health
-            print(self.physique)
+            print(highlight(f"cyan", self.health))
 
     def unlock_hobby(self):
         if players_count == 0:
             open_list_1['hobby'] = self.hobby
-            print(self.hobby)
+            print(highlight(f"cyan", self.hobby))
         if players_count == 1:
             open_list_2['hobby'] = self.hobby
-            print(self.physique)
+            print(highlight(f"cyan", self.hobby))
 
     def unlock_fear(self):
         if players_count == 0:
             open_list_1['fear'] = self.fear
-            print(self.fear)
+            print(highlight(f"cyan", self.fear))
         if players_count == 1:
             open_list_2['fear'] = self.fear
-            print(self.physique)
+            print(highlight(f"cyan", self.fear))
 
     def unlock_inventory(self):
         if players_count == 0:
             open_list_1['inventory'] = self.inventory
-            print(self.inventory)
+            print(highlight(f"cyan", self.inventory))
         if players_count == 1:
             open_list_2['inventory'] = self.inventory
-            print(self.physique)
+            print(highlight(f"cyan", self.inventory))
 
     def unlock_info(self):
         if players_count == 0:
             open_list_1['info'] = self.info
-            print(self.info)
+            print(highlight(f"cyan", self.info))
         if players_count == 1:
             open_list_2['info'] = self.info
-            print(self.physique)
+            print(highlight(f"cyan", self.info))
 
     def unlock_skill_1(self):
         if players_count == 0:
             open_list_1['skill_1'] = self.skill_1
-            print(self.skill_1)
+            print(highlight(f"cyan", self.skill_1))
         if players_count == 1:
             open_list_2['skill_1'] = self.skill_1
-            print(self.physique)
+            print(highlight(f"cyan", self.skill_1))
 
     def unlock_skill_2(self):
         if players_count == 0:
             open_list_1['skill_2'] = self.skill_2
-            print(self.skill_2)
+            print(highlight(f"cyan", self.skill_2))
         if players_count == 1:
             open_list_2['skill_2'] = self.skill_2
-            print(self.physique)
+            print(highlight(f"cyan", self.skill_2))
 
 
 player_1 = {'gender': 'male', 'physique': 'delicate', 'character': 'nasty', 'job': 'dentist',
@@ -151,9 +166,11 @@ while True:
         players_count = 0
         continue
     found = False
-    print(players_count)
+#    print(players_count)
     for i in range(len(all_list)):
-        print(f'\n'                      f'^ ^ ^ player {i + 1} bio ^ ^ ^ \n'
+        print('\n')
+        print(highlight("magenta", f" ^ ^ ^ player {i + 1} ^ ^ ^"))
+        print(f'\n'                      
               f'gender : {all_list[i].get("gender", " ")} \n'
               f'physique : {all_list[i].get("physique", " ")} \n'
               f'character : {all_list[i].get("character", " ")}\n'
@@ -301,6 +318,5 @@ while True:
         continue
 
     if found == False:
-        print(' '
-              '^ ^ ^ error in name, write again ^ ^ ^'
-              ' ')
+        print(highlight('red', '^ ^ ^ error in name, write again ^ ^ ^'
+              ' '))
