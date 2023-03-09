@@ -34,7 +34,7 @@ class Player:
             open_list_1['character'] = self.character
             print(self.character)
         if players_count == 1:
-            open_list_2['physique'] = self.physique
+            open_list_2['character'] = self.character
             print(self.physique)
 
     def unlock_job(self):
@@ -42,7 +42,7 @@ class Player:
             open_list_1['job'] = self.job
             print(self.job)
         if players_count == 1:
-            open_list_2['physique'] = self.physique
+            open_list_2['character'] = self.job
             print(self.physique)
 
     def unlock_health(self):
@@ -50,7 +50,7 @@ class Player:
             open_list_1['health'] = self.health
             print(self.health)
         if players_count == 1:
-            open_list_2['physique'] = self.physique
+            open_list_2['health'] = self.health
             print(self.physique)
 
     def unlock_hobby(self):
@@ -58,7 +58,7 @@ class Player:
             open_list_1['hobby'] = self.hobby
             print(self.hobby)
         if players_count == 1:
-            open_list_2['physique'] = self.physique
+            open_list_2['hobby'] = self.hobby
             print(self.physique)
 
     def unlock_fear(self):
@@ -66,7 +66,7 @@ class Player:
             open_list_1['fear'] = self.fear
             print(self.fear)
         if players_count == 1:
-            open_list_2['physique'] = self.physique
+            open_list_2['fear'] = self.fear
             print(self.physique)
 
     def unlock_inventory(self):
@@ -74,7 +74,7 @@ class Player:
             open_list_1['inventory'] = self.inventory
             print(self.inventory)
         if players_count == 1:
-            open_list_2['physique'] = self.physique
+            open_list_2['inventory'] = self.inventory
             print(self.physique)
 
     def unlock_info(self):
@@ -82,7 +82,7 @@ class Player:
             open_list_1['info'] = self.info
             print(self.info)
         if players_count == 1:
-            open_list_2['physique'] = self.physique
+            open_list_2['info'] = self.info
             print(self.physique)
 
     def unlock_skill_1(self):
@@ -90,7 +90,7 @@ class Player:
             open_list_1['skill_1'] = self.skill_1
             print(self.skill_1)
         if players_count == 1:
-            open_list_2['physique'] = self.physique
+            open_list_2['skill_1'] = self.skill_1
             print(self.physique)
 
     def unlock_skill_2(self):
@@ -98,7 +98,7 @@ class Player:
             open_list_1['skill_2'] = self.skill_2
             print(self.skill_2)
         if players_count == 1:
-            open_list_2['physique'] = self.physique
+            open_list_2['skill_2'] = self.skill_2
             print(self.physique)
 
 
@@ -152,19 +152,21 @@ while True:
         continue
     found = False
     print(players_count)
-    choice = input(f'\n'
-                   f'gender : {open_list_1.get("gender", " ")} \n'
-                   f'physique : {open_list_1.get("physique", " ")} \n'
-                   f'character : {open_list_1.get("character", " ")}\n'
-                   f'job : {open_list_1.get("job", " ")}\n'
-                   f'health : {open_list_1.get("health", " ")}\n'
-                   f'hobby : {open_list_1.get("hobby", " ")}\n'
-                   f'fear : {open_list_1.get("fear", " ")}\n'
-                   f'inventory : {open_list_1.get("inventory", " ")}\n'
-                   f'info : {open_list_1.get("info", " ")}\n'
-                   f'skill_1 : {open_list_1.get("skill_1", " ")}\n'
-                   f'skill_2 : {open_list_1.get("skill_2", " ")}\n'
-                   'Введіть те що ви хочете відкрити: ')
+    for i in range(len(all_list)):
+        print(f'\n'                      f'^ ^ ^ player {i + 1} bio ^ ^ ^ \n'
+              f'gender : {all_list[i].get("gender", " ")} \n'
+              f'physique : {all_list[i].get("physique", " ")} \n'
+              f'character : {all_list[i].get("character", " ")}\n'
+              f'job : {all_list[i].get("job", " ")}\n'
+              f'health : {all_list[i].get("health", " ")}\n'
+              f'hobby : {all_list[i].get("hobby", " ")}\n'
+              f'fear : {all_list[i].get("fear", " ")}\n'
+              f'inventory : {all_list[i].get("inventory", " ")}\n'
+              f'info : {all_list[i].get("info", " ")}\n'
+              f'skill_1 : {all_list[i].get("skill_1", " ")}\n'
+              f'skill_2 : {all_list[i].get("skill_2", " ")}\n')
+
+    choice = input(f'Введіть те що ви гравець {players_count + 1}  хочете відкрити:  ')
 
     if players_count == 0 and choice == 'gender':
         player_1.unlock_gender()
