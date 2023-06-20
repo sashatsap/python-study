@@ -107,9 +107,9 @@ player_1 = {'gender': 'male', 'physique': 'delicate', 'character': 'nasty', 'job
             'info': 'idol for teen', 'skill_1': 'change any characteristic of yourself', 'skill_2': 'heal any player',
             'id': '1234'}
 
-player_2 = {'gender': 'female', 'physique': 'жосрсткий', 'character': 'добрий', 'job': 'лікар',
-            'health': 'перелом ноги', 'hobby': 'відео ігри', 'fear': 'немає', 'inventory': 'цвяхи',
-            'info': 'просто тіпок', 'skill_1': 'міняє всім стать ', 'skill_2': 'міняє всім вік', 'id': '5678'}
+player_2 = {'gender': 'female', 'physique': 'Athletic', 'character': 'kind', 'job': 'medic',
+            'health': 'covid-19', 'hobby': 'video games', 'fear': 'None', 'inventory': 'nails',
+            'info': 'just a man', 'skill_1': 'change everyone gender ', 'skill_2': 'change everyone age', 'id': '5678'}
 
 open_list_1 = {'gender': '',
                'physique': '',
@@ -304,3 +304,4 @@ while True:
         print(' '
               '^ ^ ^ error in name, write again ^ ^ ^'
               ' ')
+
