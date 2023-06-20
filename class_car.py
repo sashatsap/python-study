@@ -10,7 +10,7 @@ class Car:
         self.times = 0
         self.name = name
 
-    def drive(self, length):
+    def drive(self, length: int):
         self.length = length
         print(f'drive for {length} km')
 
