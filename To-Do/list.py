@@ -1,4 +1,3 @@
 class List:
-    def __init__(self, task):
+    def __init__(self):
         self.task_list = []
-        self.task = task
