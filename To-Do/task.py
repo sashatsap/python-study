@@ -9,6 +9,6 @@ class User:
 
 class Task(List):
     def add(self, task):
-        self.task = task
+        super().__init__(task)
         self.task_list.append(self.task)
         print(self.task_list)
