@@ -1,7 +1,11 @@
 from task import Task
 
-user = Task()
+task_one = Task('do homework')
+task_two = Task('go for walk', note='with Vlad')
 
-user.add(task=input('Enter To-Do: '))
-user.add(task=input('Enter To-Do: '))
-user.change(choice=int(input()), task=input('Enter new To-Do: '))
+task_one.add_note('chem')
+
+task_two.done()
+
+print(task_one)
+print(task_two)

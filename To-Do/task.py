@@ -10,3 +10,10 @@ class Task:
     def done(self):
         self.is_done = True
 
+    def __str__(self):
+        result = (
+            f'Title: {self.title}\n'
+            f'Note: {self.note}\n'
+            f'Status: {"Done" if self.is_done else "Not started"}\n'
+        )
+        return result
